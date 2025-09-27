@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.dashboard {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  font-size: 28px;
+  color: #2c3e50;
+  margin: 0;
+  display: inline-block;
+}
+
+.logout-btn {
+  float: right;
+  background: #e74c3c;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s;
+}
+
+.logout-btn::before {
+  font-family: 'Material Icons';
+  content: "logout";
+  font-size: 20px;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin: 25px 0;
+  border-bottom: 3px solid #eee;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px;
+  cursor: pointer;
+  background: #f4f6f7;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border-radius: 10px 10px 0 0;
+}
+
+.tab::before {
+  font-family: 'Material Icons';
+  font-size: 20px;
+  margin-right: 6px;
+}
+
+.tab:nth-child(1)::before {
+  content: "account_balance_wallet";
+}
+
+.tab:nth-child(2)::before {
+  content: "money_off";
+}
+
+.tab:nth-child(3)::before {
+  content: "bar_chart";
+}
+
+.tab:hover {
+  background: #dcdde1;
+}
+
+.tab.active {
+  background: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+.tab-content {
+  display: none;
+  animation: fade 0.3s;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.btn {
+  margin-top: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn::before {
+  font-family: 'Material Icons';
+  font-size: 20px;
+  margin-right: 6px;
+}
+
+.btn.success::before {
+  content: "add_circle";
+}
+
+.btn.danger::before {
+  content: "remove_circle";
+}
+
+.btn.success {
+  background: #27ae60;
+  color: white;
+}
+
+.btn.success:hover {
+  background: #1e8449;
+}
+
+.btn.danger {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn.danger:hover {
+  background: #c0392b;
+}
+
+.saldo {
+  color: #27ae60;
+  font-size: 26px;
+  margin-top: 15px;
+  font-weight: bold;
+}

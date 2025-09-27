@@ -1,0 +1,46 @@
+<div class="dashboard">
+  <h2 class="title">Panel de Finanzas</h2>
+<button class="logout-btn" (click)="logout()">Cerrar sesión</button>
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab" 
+            [class.active]="selectedTab === 'deposito'" 
+            (click)="setTab('deposito')">Depósito</button>
+
+    <button class="tab" 
+            [class.active]="selectedTab === 'retiro'" 
+            (click)="setTab('retiro')">Retiro</button>
+
+    <button class="tab" 
+            [class.active]="selectedTab === 'balance'" 
+            (click)="setTab('balance')">Balance</button>
+  </div>
+
+  <!-- Depósito -->
+  <div class="tab-content" [class.active]="selectedTab === 'deposito'">
+    <h3>Agregar Depósito</h3>
+    <form (ngSubmit)="depositar()">
+      <label>Monto a depositar</label>
+      <input type="number" [(ngModel)]="montoDeposito" name="montoDeposito" required />
+      <button type="submit" class="btn success">Depositar</button>
+    </form>
+  </div>
+
+  <!-- Retiro -->
+  <div class="tab-content" [class.active]="selectedTab === 'retiro'">
+    <h3>Agregar Retiro</h3>
+    <form (ngSubmit)="retirar()">
+      <label>Monto a retirar</label>
+      <input type="number" [(ngModel)]="montoRetiro" name="montoRetiro" required />
+      <button type="submit" class="btn danger">Retirar</button>
+    </form>
+  </div>
+
+  <!-- Balance -->
+  <div class="tab-content" [class.active]="selectedTab === 'balance'">
+    <h3>Resumen Financiero</h3>
+    <p><strong>Total Depósitos:</strong> {{ totalDepositos | currency:'USD':'symbol' }}</p>
+    <p><strong>Total Retiros:</strong> {{ totalRetiros | currency:'USD':'symbol' }}</p>
+    <p class="saldo"><strong>Saldo actual:</strong> {{ saldo | currency:'USD':'symbol' }}</p>
+  </div>
+</div>
