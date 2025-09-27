@@ -1,0 +1,154 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #18191a;
+  color: #e4e6eb;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #242526;
+  padding: 10px 20px;
+  border-bottom: 1px solid #3a3b3c;
+}
+.logo {
+  color: #00bcd4;
+  font-size: 24px;
+  font-weight: bold;
+}
+.navbar input {
+  width: 40%;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: none;
+  background: #3a3b3c;
+  color: #e4e6eb;
+  outline: none;
+}
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #b0b3b8;
+  font-size: 28px;
+  cursor: pointer;
+}
+.nav-icons span:hover {
+  color: #00bcd4;
+}
+.main-content {
+  flex: 1;
+  display: flex;
+}
+.sidebar {
+  width: 220px;
+  background: #242526;
+  padding: 20px;
+  border-right: 1px solid #3a3b3c;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #e4e6eb;
+  transition: background 0.3s;
+}
+.sidebar li:hover {
+  background: #3a3b3c;
+  color: #00bcd4;
+}
+.feed {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #18191a;
+}
+.new-post {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.new-post input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background: #3a3b3c;
+  color: #e4e6eb;
+}
+.new-post button {
+  background: #00bcd4;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.new-post button:hover {
+  background: #0097a7;
+}
+.post {
+  background: #242526;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #3a3b3c;
+}
+.post h4 {
+  margin: 0 0 8px 0;
+  color: #00bcd4;
+}
+.post p {
+  margin: 0 0 10px 0;
+}
+.actions {
+  display: flex;
+  gap: 10px;
+  font-size: 22px;
+  color: #b0b3b8;
+  cursor: pointer;
+}
+.actions span:hover {
+  color: #00bcd4;
+}
+.rightbar {
+  width: 220px;
+  background: #242526;
+  padding: 20px;
+  border-left: 1px solid #3a3b3c;
+}
+.rightbar h4 {
+  margin-bottom: 15px;
+  color: #00bcd4;
+}
+.rightbar ul {
+  list-style: none;
+  padding: 0;
+}
+.rightbar li {
+  padding: 8px 0;
+  border-bottom: 1px solid #3a3b3c;
+  color: #e4e6eb;
+}
+.example-header-image {
+  background-image: url('https://cdn.5dias.com.py/uploads/WhatsApp_Image_2024-01-21_at_13.59.20.jpeg');
+  background-size: cover;
+}
+.example-card {
+  background: #242526;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #3a3b3c;
+}

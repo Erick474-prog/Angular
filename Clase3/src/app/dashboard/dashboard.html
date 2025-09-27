@@ -1,0 +1,67 @@
+<div class="dashboard">
+  
+  <header class="navbar">
+    <h2 class="logo">GameNet</h2>
+    <input type="text" placeholder="Buscar jugadores o juegos..." />
+    <div class="nav-icons">
+      <span class="material-icons">notifications</span>
+      <span (click)="goToProfile()" class="material-icons">account_circle</span>
+      <span class="material-icons">logout</span>
+    </div>
+  </header>
+
+  <div class="main-content">
+    
+    <aside class="sidebar">
+        <ul>
+            <li><span class="material-icons">home</span> Inicio</li>
+            <li><span class="material-icons">group</span> Amigos</li>
+            <li><span class="material-icons">sports_esports</span> Clanes</li>
+            <li><span class="material-icons">emoji_events</span> Eventos</li>
+            <li><span class="material-icons">settings</span> Ajustes</li>
+        </ul>
+    </aside>
+
+    <section class="feed">
+      
+      <div class="new-post">
+        <input [(ngModel)]="newPost" placeholder="Comparte tu partida..." />
+        <button (click)="addPost()">Publicar</button>
+      </div>
+
+    
+      <div class="post" *ngFor="let post of posts">
+        <h4>{{ user.username }}</h4>
+        <p>{{ post }}</p>
+        <div class="actions">
+          <span class="material-icons">sports_esports</span>
+        </div>
+      </div>
+      <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="https://cdn.5dias.com.py/uploads/WhatsApp_Image_2024-01-21_at_13.59.20.jpeg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          
+          <button matButton>SHARE</button>
+        </mat-card-actions>
+    </mat-card>
+    </section>
+
+    <aside class="rightbar">
+      <h4>Amigos en línea</h4>
+      <ul>
+        <li *ngFor="let friend of friends">{{ friend }}</li>
+      </ul>
+    </aside>
+  </div>
+</div>
